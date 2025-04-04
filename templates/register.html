@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>Create Your Account</p>
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="Username">>
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" class="reg">Register</button>	
+</body>
+</html>
