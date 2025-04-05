@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+    <title>dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Welcome, {{ username }}!</p>
+    <p>Your balance: {{ balance }}</p>
+    <button onClick="openWith()" class="reg">Withdraw</button>
+
+    <div id="withdraw" class="with">
+        <div class="modal-content">
+            <span class="close" onclick="closeWith()">&times;</span>
+            <p>Withdraw</p>
+            <form action="/dashboard" method="POST">
+                <input type="amount" name="amount" placeholder="Amount">
+                <button type="submit" class="reg">Withdraw</button>
+            </form>
+        </div>
+    </div>
+
+    <button onClick="openDepo()" class="reg">Deposit</button>
+    <div id="deposit" class="depo">
+        <div class="modal-content">
+            <span class="closed" onclick="closeDepo()">&times;</span>
+            <p>Deposit</p>
+            <form action="/dashboard" method="POST">
+                <input type="amountd" name="amountd" placeholder="Amount">
+                <button type="submit" class="reg">Withdraw</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

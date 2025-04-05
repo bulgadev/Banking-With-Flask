@@ -1,0 +1,60 @@
+.with {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+.depo {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contentd {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.closed {
+    color: red;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
