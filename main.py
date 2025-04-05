@@ -75,6 +75,20 @@ def deposit():
     cursor.execute("UPDATE users SET balance = balance + ? where USERNAME = ?", (amount, username))
     conn.commit()
 
+def transfer():
+    username = session['username']
+    try:
+        amount = float(request.form.get('amountt'))
+        who = request.form.get('recipient')
+    except:
+        return 'Invalid Amount or Person', 400
+    #ups recipient balance
+    cursor.execute('UPDATE users SET balance = balance + ? WHERE username = ?', (amount, who))
+    #down the balance of sender
+    cursor.execute('UPDATE users SET balance = balance - ? where username = ?', (amount, username))
+    conn.commit()
+    
+
 
 @app.route("/")
 def hello_world():
@@ -113,6 +127,9 @@ def dashboard():
             withdraw()
         elif 'amountd'in request.form:
             deposit()
+        elif 'amountt' in request.form:
+            transfer()
+        return redirect("/dashboard")
 
     balance = check_balance()[0]
     return render_template("dashboard.html", username=username, balance=balance)

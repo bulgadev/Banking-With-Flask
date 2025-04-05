@@ -35,5 +35,19 @@
             </form>
         </div>
     </div>
+
+    <button onClick="openTransfer()" class="reg">Transfer</button>
+    <div id="transfer" class="transf">
+        <div class="modal-contentt">
+            <span class="closet" onclick="closeTransfer()">&times;</span>
+            <p>Transfer</p>
+            <form action="/dashboard" method="POST">
+                <input type="recipient" name="recipient" placeholder="Recipient Username">
+                <input type="amountt" name="amountt" placeholder="Amount">
+                <button type="submit" class="reg">Transfer</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
